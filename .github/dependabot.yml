@@ -3,13 +3,21 @@ updates:
   # Scan all Gradle files across the repository
   - package-ecosystem: "gradle"
     directories:
-      - "/**"
+      - "/*"
+      - "/*/*"
+      - "/*/*/*"
+      - "/*/*/*/*"
+      - "/*/*/*/*/*"
     schedule:
       interval: "daily"
 
   # Scan all npm package-lock.json files across the repository
   - package-ecosystem: "npm"
     directories:
-      - "/**"
+      - "/*"
+      - "/*/*"
+      - "/*/*/*"
+      - "/*/*/*/*"
+      - "/*/*/*/*/*"
     schedule:
       interval: "daily"

@@ -1,0 +1,3 @@
+rootProject.name = 'broadcom-product-scripts'
+
+include '/output-management/web-viewer/favorites/favorites'

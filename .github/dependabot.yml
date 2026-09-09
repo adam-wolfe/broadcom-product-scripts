@@ -3,7 +3,7 @@ updates:
   # Scan all Gradle files across the repository
   - package-ecosystem: "gradle"
     directories:
-      - "/output-management/web-viewer/favorites/build.gradle"
-      - "/output-management/web-viewer/favorites/favorites/build.gradle"
+      - "/output-management/web-viewer/favorites"
+      - "/output-management/web-viewer/favorites/favorites"
     schedule:
       interval: "daily"

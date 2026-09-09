@@ -7,3 +7,4 @@ updates:
       - "/output-management/web-viewer/favorites/favorites"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 0

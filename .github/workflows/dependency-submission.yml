@@ -11,6 +11,12 @@ permissions:
 jobs:
   dependency-submission:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # List all relative paths containing a build.gradle file
+        project-dir:
+          - './output-management/web-viewer/favorites'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,9 +27,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Generate and Submit Dependency Graph
+      - name: Submit Dependency Graph for ${{ matrix.project-dir }}
         uses: gradle/actions/dependency-submission@v3
         with:
-          # Tells the action to install and run Gradle directly 
-          # instead of looking for a root ./gradlew file
           gradle-version: 'current'
+          build-root-directory: ${{ matrix.project-dir }}

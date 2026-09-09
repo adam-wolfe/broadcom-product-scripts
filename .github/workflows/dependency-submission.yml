@@ -1,17 +1,18 @@
-name: Gradle Dependency Submission
+name: Submit Gradle Dependency Graph
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
-  submit-dependencies:
+  dependency-submission:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Java
@@ -20,6 +21,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      # Executes Gradle natively to extract EVERY dependency (direct, dynamic, and transitive)
-      - name: Submit Dependency Graph
+      - name: Generate and Submit Dependency Graph
         uses: gradle/actions/dependency-submission@v3
+        with:
+          # Tells the action to install and run Gradle directly 
+          # instead of looking for a root ./gradlew file
+          gradle-version: 'current'

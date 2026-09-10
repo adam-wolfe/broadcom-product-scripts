@@ -31,4 +31,4 @@ jobs:
         uses: gradle/actions/dependency-submission@v3
         with:
           gradle-version: 'current'
-          build-root-directory: ${{ matrix.project-dir }}
+          build-root-directory: /output-management/web-viewer/favorites/favorites'

@@ -16,7 +16,7 @@ jobs:
       matrix:
         # List all relative paths containing a build.gradle file
         project-dir:
-          - '/output-management/web-viewer/favorites/favorites'
+          - '././/output-management/web-viewer/favorites/favorites'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

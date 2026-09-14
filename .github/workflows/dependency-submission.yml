@@ -26,5 +26,5 @@ jobs:
         uses: gradle/actions/dependency-submission@v3
         with:
           gradle-version: '7.6.6'
-          ignore-execution-failures: true
+          dependency-graph-continue-on-failure: 'true'
           additional-arguments: '-x test --continue'

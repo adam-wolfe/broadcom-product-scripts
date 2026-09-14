@@ -40,10 +40,4 @@ jobs:
         with:
           gradle-version: '7.6.6'
           dependency-graph-continue-on-failure: 'true'
-          build-root-directory: |
-            output-management/web-viewer/favorites
-            output-management/web-viewer/favorites/favorites
-            output-management/web-viewer/downloader
-            output-management/web-viewer/downloader/application
-            output-management/web-viewer/api-basics/java
-            share/2022_columbus/AtoZ/email-spring-boot
+          additional-arguments: '-x test --continue'

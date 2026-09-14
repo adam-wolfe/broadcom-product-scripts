@@ -51,4 +51,4 @@ jobs:
         with:
           gradle-version: '7.6.6'
           build-root-directory: '${{ matrix.project-dir }}'
-          workflow-job-context: '${{ github.workflow }}_${{ matrix.project-dir }}'
+          workflow-job-context: '${{ toJson(matrix) }}'

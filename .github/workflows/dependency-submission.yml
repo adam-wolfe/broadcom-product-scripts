@@ -16,9 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         project-dir:
-          - 'output-management/web-viewer/favorites'
           - 'output-management/web-viewer/favorites/favorites'
-          - 'output-management/web-viewer/downloader'
           - 'output-management/web-viewer/downloader/application'
           - 'output-management/web-viewer/api-basics/java'
           - 'share/2022_columbus/AtoZ/email-spring-boot'

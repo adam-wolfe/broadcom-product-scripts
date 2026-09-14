@@ -51,4 +51,4 @@ jobs:
         with:
           gradle-version: '7.6.6'
           build-root-directory: '${{ matrix.project-dir }}'
-          correlator: 'gradle-${{ matrix.project-dir }}'
+          correlator: '${{ github.workflow }}_${{ matrix.project-dir }}'

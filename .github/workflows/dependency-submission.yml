@@ -12,16 +12,6 @@ permissions:
 jobs:
   dependency-submission:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        project-dir:
-          - 'output-management/web-viewer/favorites'
-          - 'output-management/web-viewer/favorites/favorites'
-          - 'output-management/web-viewer/downloader'
-          - 'output-management/web-viewer/downloader/application'
-          - 'output-management/web-viewer/api-basics/java'
-          - 'share/2022_columbus/AtoZ/email-spring-boot'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -36,5 +26,10 @@ jobs:
         uses: gradle/actions/dependency-submission@v3
         with:
           gradle-version: '7.6.6'
-          build-root-directory: '${{ github.workspace }}/${{ matrix.project-dir }}'
-          correlator: 'submit-gradle-${{ github.job }}-${{ matrix.project-dir }}'
+          additional-arguments: >-
+            -p output-management/web-viewer/favorites
+            -p output-management/web-viewer/favorites/favorites
+            -p output-management/web-viewer/downloader
+            -p output-management/web-viewer/downloader/application
+            -p output-management/web-viewer/api-basics/java
+            -p share/2022_columbus/AtoZ/email-spring-boot

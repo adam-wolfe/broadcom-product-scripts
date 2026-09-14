@@ -1,19 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "gradle"
-    directory: "/output-management/web-viewer/favorites"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
-
-  - package-ecosystem: "gradle"
     directory: "/output-management/web-viewer/favorites/favorites"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
-
-  - package-ecosystem: "gradle"
-    directory: "/output-management/web-viewer/downloader"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 0

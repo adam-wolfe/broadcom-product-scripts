@@ -1,8 +1,13 @@
 rootProject.name = 'broadcom-product-scripts'
 
-include 'output-management:web-viewer:favorites'
-include 'output-management:web-viewer:favorites:favorites'
-include 'output-management:web-viewer:downloader'
-include 'output-management:web-viewer:downloader:application'
-include 'output-management:web-viewer:api-basics:java'
-include 'share:2022_columbus:AtoZ:email-spring-boot'
+// Include your 6 subprojects
+include ':output-management:web-viewer:favorites'
+include ':output-management:web-viewer:favorites:favorites'
+include ':output-management:web-viewer:downloader'
+include ':output-management:web-viewer:downloader:application'
+include ':output-management:web-viewer:api-basics:java'
+include ':share:2022_columbus:AtoZ:email-spring-boot'
+
+// Stub out the missing :sdk project cleanly so Gradle doesn't crash
+include ':sdk'
+project(':sdk').projectDir = file('.github/sdk')

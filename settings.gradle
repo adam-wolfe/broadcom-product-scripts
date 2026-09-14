@@ -7,4 +7,4 @@ include 'output-management:web-viewer:downloader:application'
 include 'output-management:web-viewer:api-basics:java'
 include 'share:2022_columbus:AtoZ:email-spring-boot'
 include ':sdk'
-project(':sdk').projectDir = file('.')
+project(':sdk').projectDir = file('.github')

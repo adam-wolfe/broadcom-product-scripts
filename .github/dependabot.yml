@@ -1,10 +1,37 @@
 version: 2
 updates:
-  # Scan all Gradle files across the repository
   - package-ecosystem: "gradle"
-    directories:
-      - "/output-management/web-viewer/favorites"
-      - "/output-management/web-viewer/favorites/favorites"
+    directory: "/output-management/web-viewer/favorites"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+
+  - package-ecosystem: "gradle"
+    directory: "/output-management/web-viewer/favorites/favorites"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+
+  - package-ecosystem: "gradle"
+    directory: "/output-management/web-viewer/downloader"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+
+  - package-ecosystem: "gradle"
+    directory: "/output-management/web-viewer/downloader/application"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+
+  - package-ecosystem: "gradle"
+    directory: "/output-management/web-viewer/api-basics/java"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+
+  - package-ecosystem: "gradle"
+    directory: "/share/2022_columbus/AtoZ/email-spring-boot"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 0

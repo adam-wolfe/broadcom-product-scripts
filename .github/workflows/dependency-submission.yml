@@ -22,22 +22,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      # Dynamically inject the missing :sdk module in memory
-      - name: Create Temporary Gradle Init Script
-        run: |
-          mkdir -p ~/.gradle
-          cat << 'EOF' > ~/.gradle/init.gradle
-          gradle.settingsEvaluated { settings ->
-              if (!settings.findProject(':sdk')) {
-                  settings.include(':sdk')
-                  settings.project(':sdk').projectDir = settings.rootDir
-              }
-          }
-          EOF
-
-      - name: Submit Dependency Graphs
+      - name: Submit All Dependencies
         uses: gradle/actions/dependency-submission@v3
         with:
           gradle-version: '7.6.6'
-          dependency-graph-continue-on-failure: 'true'
-          additional-arguments: '-x test --continue'

@@ -1,0 +1,8 @@
+rootProject.name = 'broadcom-product-scripts'
+
+include 'output-management:web-viewer:favorites'
+include 'output-management:web-viewer:favorites:favorites'
+include 'output-management:web-viewer:downloader'
+include 'output-management:web-viewer:downloader:application'
+include 'output-management:web-viewer:api-basics:java'
+include 'share:2022_columbus:AtoZ:email-spring-boot'

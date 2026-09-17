@@ -18,7 +18,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
 	
-	implementation "org.zowe.apiml.sdk:onboarding-enabler-spring:2.3.3"
+	implementation "org.zowe.apiml.sdk:onboarding-enabler-spring:3.5.8"
 	implementation "io.springfox:springfox-swagger2:2.7.0"
 	implementation 'io.swagger.core.v3:swagger-jaxrs2:2.0.0'
 	implementation "io.springfox:springfox-spring-web:2.7.0"

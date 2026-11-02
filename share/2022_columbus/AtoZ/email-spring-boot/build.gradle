@@ -12,6 +12,7 @@ sourceCompatibility = '1.8'
 ext['snakeyaml.version'] = '2.0'
 ext['org.apache.tomcat.embed:tomcat-embed-core'] = '9.0.123'
 ext['commons-lang:commons-lang'] = '3.18.0'
+ext['com.google.guava:guava'] = '32.0.1'
 
 repositories {
 	mavenCentral()

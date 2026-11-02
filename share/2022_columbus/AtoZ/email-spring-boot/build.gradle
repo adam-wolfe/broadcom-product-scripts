@@ -33,9 +33,7 @@ dependencies {
 
 	implementation "com.google.guava:guava:33.7.2-jre"
 	implementation "commons-lang:commons-lang:3.18.0"
-	constraints {
-	    implementation "org.apache.commons:commons-lang3:3.18.0"
-	}
+	implementation "org.apache.commons:commons-lang3:3.18.0"
 }
 
 tasks.named('test') {

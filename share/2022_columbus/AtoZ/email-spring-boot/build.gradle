@@ -20,7 +20,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
-	implementation "org.zowe.apiml.sdk:onboarding-enabler-spring:2.19.3"
+	implementation "org.zowe.apiml.sdk:onboarding-enabler-spring:3.5.8"
 	
 	// Upgraded to patch Guava and Jackson vulnerabilities
 	implementation "io.springfox:springfox-swagger2:2.9.2"

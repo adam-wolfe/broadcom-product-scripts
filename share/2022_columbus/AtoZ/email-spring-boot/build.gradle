@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 // Overrides the vulnerable SnakeYAML version inherited by Spring Boot 2.7
-ext['snakeyaml.version'] = '1.33'
+ext['snakeyaml.version'] = '2.0'
 
 repositories {
 	mavenCentral()

@@ -10,6 +10,7 @@ sourceCompatibility = '1.8'
 
 // Overrides the vulnerable SnakeYAML version inherited by Spring Boot 2.7
 ext['snakeyaml.version'] = '2.0'
+ext['org.apache.tomcat.embed:tomcat-embed-core'] = '9.0.121'
 
 repositories {
 	mavenCentral()

@@ -49,6 +49,7 @@ jobs:
       - name: Submit Dependency Graph for ${{ matrix.project-dir }}
         uses: gradle/actions/dependency-submission@v3
         with:
-          gradle-version: '7.6.6'
+          # gradle-version: '7.6.6'
+          gradle-version: '8.14'
           build-root-directory: '${{ matrix.project-dir }}'
           workflow-job-context: '${{ toJson(matrix) }}'

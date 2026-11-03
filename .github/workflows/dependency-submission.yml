@@ -52,7 +52,6 @@ jobs:
               }
           }
           EOF
-          EOF
 
       - name: Submit Dependency Graph for ${{ matrix.project-dir }}
         uses: gradle/actions/dependency-submission@v3

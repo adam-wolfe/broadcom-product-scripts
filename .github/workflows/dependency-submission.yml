@@ -44,6 +44,14 @@ jobs:
                   settings.project(':sdk').projectDir = dummySdkDir
               }
           }
+
+          gradle.beforeProject { prj ->
+              if (prj.path == ':sdk') {
+                  prj.apply plugin: 'java'
+                  prj.apply plugin: 'java-library'
+              }
+          }
+          EOF
           EOF
 
       - name: Submit Dependency Graph for ${{ matrix.project-dir }}
